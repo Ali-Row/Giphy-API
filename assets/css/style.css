@@ -1,0 +1,57 @@
+* {
+    font-family: 'Lato', sans-serif !important;
+}
+
+body{
+	background: url("../images/background.jpg");
+    color: black;
+    background-size: 100%;
+    background-position: fixed;
+}
+
+.jumbotron {
+    background-color: inherit;
+}
+
+.jumbotron .h1, .jumbotron h1 {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(143, 143, 143) !important;
+}
+
+img { 
+    width: 290px;
+    height: 190px;
+}
+
+.btn {
+    background-color: #999999;
+    border-color: #fff;
+    margin: 5px;
+}
+
+.gif_div {
+    float: left;
+    margin: 20px;
+    padding: 10px;
+}
+
+img:hover {
+    opacity: 0.9;
+    transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -webkit-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+	background-color: #fff;
+	opacity: 0.95;
+    padding: 20px;
+}
+
+
+
