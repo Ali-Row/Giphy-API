@@ -83,7 +83,7 @@ function add_new_gif_button() {
 function display_gifs() {
   var action = $(this).attr("data-name");
   var queryURL =
-    "http://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=sYKznHjAnjBuORs2VLxwDU6S4UsS1DGu&limit=10";
+    "https://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=sYKznHjAnjBuORs2VLxwDU6S4UsS1DGu&limit=10";
 
   // using AJAX to get back the JSON using the GET method
   $.ajax({
