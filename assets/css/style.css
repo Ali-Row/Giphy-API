@@ -5,8 +5,8 @@ body {
     /* background-image: linear-gradient(rgb(53, 53, 53), rgb(0, 0, 0)); */
     background: #131418;
 }
-label {
-    color: rgb(185, 185, 185);
+label, p {
+    color: rgb(140, 145, 161);
 }
 h1 {
     color: rgb(255, 255, 255);
@@ -20,6 +20,11 @@ img {
 }
 .btn {
     margin: 5px;
+    background: #4B4E59;
+    border: #4B4E59;
+}
+.btn:hover {
+    background: rgb(62, 65, 73);
 }
 .gif_div {
     float: left;

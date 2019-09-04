@@ -8,7 +8,7 @@ let buttons_array = ["Nissan", "Honda", "Subaru", "Toyota", "Jaguar", "Ferrari",
 function show_gif_buttons() {
     $("#show_buttons").empty();
     for (let i = 0; i < buttons_array.length; i++) {
-    let gif_buttons = $('<button class="action btn btn-secondary rounded-0">');
+    let gif_buttons = $('<button class="action btn btn-secondary rounded-pill">');
     gif_buttons.attr("data-name", buttons_array[i]);
     gif_buttons.text(buttons_array[i]);
     $("#show_buttons").append(gif_buttons);
