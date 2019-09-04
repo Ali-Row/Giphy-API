@@ -1,6 +1,10 @@
 * {
     font-family: 'Lato', sans-serif !important;
 }
+#giphyLogo {
+    max-width: 49px;
+    margin-bottom: 14px; 
+}
 body {
     /* background-image: linear-gradient(rgb(53, 53, 53), rgb(0, 0, 0)); */
     background: #131418;
@@ -14,10 +18,6 @@ h1 {
     font-size: 4rem;
     padding: 30px
 }
-img { 
-    width: 330px;
-    height: 220px;
-}
 .btn {
     margin: 5px;
     background: #4B4E59;
@@ -26,7 +26,11 @@ img {
 .btn:hover {
     background: rgb(62, 65, 73);
 }
-img:hover {
+.image { 
+    width: 330px;
+    height: 220px;
+}
+.image:hover {
     border: solid rgb(140, 145, 161) 1px;
     transition: border 0.1s ease-out;
     -moz-transition: border 0.1s ease-out;
