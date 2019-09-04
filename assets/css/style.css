@@ -26,14 +26,14 @@ img {
 .btn:hover {
     background: rgb(62, 65, 73);
 }
-/* img:hover {
-    width: px;
-    transition: width 0.2s ease-out;
-    -moz-transition: width 0.2s ease-out;
-    -webkit-transition: width 0.2s ease-out;
-    -o-transition: width 0.2s ease-out;
+img:hover {
+    border: solid rgb(140, 145, 161) 1px;
+    transition: border 0.1s ease-out;
+    -moz-transition: border 0.1s ease-out;
+    -webkit-transition: border 0.1s ease-out;
+    -o-transition: border 0.1s ease-out;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
- */
+
 
 
