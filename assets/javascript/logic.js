@@ -8,7 +8,7 @@ let buttons_array = ["Nissan", "Honda", "Subaru", "Toyota", "Jaguar", "Ferrari",
 function show_gif_buttons() {
     $("#show_buttons").empty();
     for (let i = 0; i < buttons_array.length; i++) {
-    let gif_buttons = $('<button class="action btn btn-primary">');
+    let gif_buttons = $('<button class="action btn btn-secondary rounded-0">');
     gif_buttons.attr("data-name", buttons_array[i]);
     gif_buttons.text(buttons_array[i]);
     $("#show_buttons").append(gif_buttons);
@@ -18,9 +18,7 @@ function show_gif_buttons() {
 // function to add a new gif button
 function add_new_gif_button() {
     $("#submit_new_gif").on("click", function() {
-    let action = $("#button_input")
-        .val()
-        .trim();
+    let action = $("#button_input").val().trim();
     if (action == "") {
         return false;
     }
@@ -57,7 +55,7 @@ function display_gifs() {
         
         //appends gif rating & gif image
         gif_div.append(gif_rating);
-        var gif_image = $('<img class="image">');
+        let gif_image = $('<img class="image">');
         gif_image.attr("src", results[i].images.fixed_height_small_still.url);
         gif_image.attr(
         "data-still",
