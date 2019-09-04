@@ -3,10 +3,13 @@
 }
 body {
     /* background-image: linear-gradient(rgb(53, 53, 53), rgb(0, 0, 0)); */
-    background: rgb(44, 44, 44);
+    background: #131418;
 }
 h1 {
-    color: rgb(143, 143, 143);
+    color: rgb(255, 255, 255);
+    font-family: 'Neucha', cursive !important;
+    font-size: 4rem;
+    padding: 30px
 }
 img { 
     width: 290px;
