@@ -27,9 +27,12 @@ img {
     background: rgb(62, 65, 73);
 }
 .gif_div {
-    float: left;
+    /* display: flex;
+    flex-direction: column-reverse;
     margin: 20px;
     padding: 10px;
+    border: solid red;
+    max-width: 312px; */
 }
 img:hover {
     opacity: 0.9;

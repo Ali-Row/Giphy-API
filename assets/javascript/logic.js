@@ -33,7 +33,7 @@ function add_new_gif_button() {
 function display_gifs() {
     let action = $(this).attr("data-name");
     let queryURL =
-    "https://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=sYKznHjAnjBuORs2VLxwDU6S4UsS1DGu&limit=10";
+    "https://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=sYKznHjAnjBuORs2VLxwDU6S4UsS1DGu&limit=45";
 
     // using AJAX to get back the JSON using the GET method
     $.ajax({
@@ -50,7 +50,7 @@ function display_gifs() {
         alert("No gifs were found");
     }
     for (let i = 0; i < results.length; i++) {
-        let gif_div = $('<div class="gif_div">');
+        let gif_div = $('<div class="col-xs-3 mx-auto p-3"><div class="gif_div">');
         let gif_rating = $("<p>").text("Rating: " + results[i].rating);
         
         //appends gif rating & gif image
