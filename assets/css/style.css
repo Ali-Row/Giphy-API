@@ -5,6 +5,9 @@ body {
     /* background-image: linear-gradient(rgb(53, 53, 53), rgb(0, 0, 0)); */
     background: #131418;
 }
+label {
+    color: rgb(185, 185, 185);
+}
 h1 {
     color: rgb(255, 255, 255);
     font-family: 'Neucha', cursive !important;
