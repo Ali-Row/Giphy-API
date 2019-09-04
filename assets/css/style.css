@@ -15,8 +15,8 @@ h1 {
     padding: 30px
 }
 img { 
-    width: 290px;
-    height: 190px;
+    width: 330px;
+    height: 220px;
 }
 .btn {
     margin: 5px;
@@ -26,22 +26,14 @@ img {
 .btn:hover {
     background: rgb(62, 65, 73);
 }
-.gif_div {
-    /* display: flex;
-    flex-direction: column-reverse;
-    margin: 20px;
-    padding: 10px;
-    border: solid red;
-    max-width: 312px; */
-}
-img:hover {
-    opacity: 0.9;
-    transition: opacity 0.2s ease-out;
-    -moz-transition: opacity 0.2s ease-out;
-    -webkit-transition: opacity 0.2s ease-out;
-    -o-transition: opacity 0.2s ease-out;
+/* img:hover {
+    width: px;
+    transition: width 0.2s ease-out;
+    -moz-transition: width 0.2s ease-out;
+    -webkit-transition: width 0.2s ease-out;
+    -o-transition: width 0.2s ease-out;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+ */
 
 
