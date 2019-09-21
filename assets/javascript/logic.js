@@ -4,7 +4,12 @@ $(document).ready(function() {
 // new buttons will be pushed into this array;
 let buttonsArray = ["Nissan", "Honda", "Subaru", "Toyota", "Jaguar", "Ferrari", "Dodge", "Mitsubishi", "Jeep", "Kia", "Saab", "Volvo", "Scion"];
 
-let secretKey = "uGD1SsU4S6UDwxLV2sROuBjnAjHnzKYs".split("").reverse().join("");
+let key = ["uGD1SsU4", "S6UDwxLV", "2sROuBjn", "AjHnzKYs"];
+
+let secretKey = key.join("").split("").reverse().join("");
+
+console.log(secretKey);
+
 
 //shows the buttons
 function show_gif_buttons() {
