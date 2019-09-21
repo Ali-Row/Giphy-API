@@ -2,15 +2,17 @@
 $(document).ready(function() {
 
 // new buttons will be pushed into this array;
-let buttons_array = ["Nissan", "Honda", "Subaru", "Toyota", "Jaguar", "Ferrari", "Dodge", "Mitsubishi", "Jeep", "Kia", "Saab", "Volvo", "Scion"];
+let buttonsArray = ["Nissan", "Honda", "Subaru", "Toyota", "Jaguar", "Ferrari", "Dodge", "Mitsubishi", "Jeep", "Kia", "Saab", "Volvo", "Scion"];
+
+let secretKey = "uGD1SsU4S6UDwxLV2sROuBjnAjHnzKYs".split("").reverse().join("");
 
 //shows the buttons
 function show_gif_buttons() {
     $("#show_buttons").empty();
-    for (let i = 0; i < buttons_array.length; i++) {
+    for (let i = 0; i < buttonsArray.length; i++) {
     let gif_buttons = $('<button class="action btn btn-secondary rounded-pill">');
-    gif_buttons.attr("data-name", buttons_array[i]);
-    gif_buttons.text(buttons_array[i]);
+    gif_buttons.attr("data-name", buttonsArray[i]);
+    gif_buttons.text(buttonsArray[i]);
     $("#show_buttons").append(gif_buttons);
     }
 }
@@ -22,7 +24,7 @@ function add_new_gif_button() {
     if (action == "") {
         return false;
     }
-    buttons_array.push(action);
+    buttonsArray.push(action);
 
     show_gif_buttons();
     return false;
@@ -33,7 +35,7 @@ function add_new_gif_button() {
 function display_gifs() {
     let action = $(this).attr("data-name");
     let queryURL =
-    "https://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=sYKznHjAnjBuORs2VLxwDU6S4UsS1DGu&limit=45";
+    "https://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=" + secretKey + "&limit=45";
 
     // using AJAX to get back the JSON using the GET method
     $.ajax({
