@@ -5,39 +5,36 @@ $(document).ready(function() {
 let buttonsArray = ["Nissan", "Honda", "Subaru", "Toyota", "Jaguar", "Ferrari", "Dodge", "Mitsubishi", "Jeep", "Kia", "Saab", "Volvo", "Scion"];
 
 let key = ["uGD1SsU4", "S6UDwxLV", "2sROuBjn", "AjHnzKYs"];
-
 let secretKey = key.join("").split("").reverse().join("");
-
-console.log(secretKey);
-
+AOS.init();
 
 //shows the buttons
-function show_gif_buttons() {
+function showGifButtons() {
     $("#show_buttons").empty();
     for (let i = 0; i < buttonsArray.length; i++) {
-    let gif_buttons = $('<button class="action btn btn-secondary rounded-pill">');
-    gif_buttons.attr("data-name", buttonsArray[i]);
-    gif_buttons.text(buttonsArray[i]);
-    $("#show_buttons").append(gif_buttons);
+    let gifButtons = $('<button class="action btn btn-secondary rounded-pill animated zoomIn">');
+    gifButtons.attr("data-name", buttonsArray[i]);
+    gifButtons.text(buttonsArray[i]);
+    $("#show_buttons").append(gifButtons);
     }
 }
 
 // function to add a new gif button
-function add_new_gif_button() {
+function addNewGifButton() {
     $("#submit_new_gif").on("click", function() {
     let action = $("#button_input").val().trim();
-    if (action == "") {
+    if (!action) {
         return false;
     }
     buttonsArray.push(action);
 
-    show_gif_buttons();
+    showGifButtons();
     return false;
     });
 }
 
 // function to display all of the gifs
-function display_gifs() {
+function displayGifs() {
     let action = $(this).attr("data-name");
     let queryURL =
     "https://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=" + secretKey + "&limit=45";
@@ -57,31 +54,31 @@ function display_gifs() {
         alert("No gifs were found");
     }
     for (let i = 0; i < results.length; i++) {
-        let gif_div = $('<div class="col-xs-3 mx-auto p-3"><div class="gif_div">');
-        let gif_rating = $("<p>").text("Rating: " + results[i].rating);
+        let gifDiv = $(`<div class="col-xs-3 mx-auto p-3" data-aos="fade-up"><div class="gifDiv">`);
+        let gifRating = $("<p>").text("Rating: " + results[i].rating);
         
         //appends gif rating & gif image
-        gif_div.append(gif_rating);
-        let gif_image = $('<img class="image">');
-        gif_image.attr("src", results[i].images.fixed_height_small_still.url);
-        gif_image.attr(
+        gifDiv.append(gifRating);
+        let gifImage = $('<img class="image">');
+        gifImage.attr("src", results[i].images.fixed_height_small_still.url);
+        gifImage.attr(
         "data-still",
         results[i].images.fixed_height_small_still.url
         );
-        gif_image.attr("data-animate", results[i].images.fixed_height_small.url);
-        gif_image.attr("data-state", "still");
-        gif_div.append(gif_image);
+        gifImage.attr("data-animate", results[i].images.fixed_height_small.url);
+        gifImage.attr("data-state", "still");
+        gifDiv.append(gifImage);
 
-        $("#view_gifs").prepend(gif_div);
+        $("#view_gifs").prepend(gifDiv);
     }
     });
 }
 
-show_gif_buttons();
-add_new_gif_button();
+showGifButtons();
+addNewGifButton();
 
 // changes the state of the gifs from still to animated using the on click function
-$(document).on("click", ".action", display_gifs);
+$(document).on("click", ".action", displayGifs);
 $(document).on("click", ".image", function() {
     let state = $(this).attr("data-state");
     if (state == "still") {
