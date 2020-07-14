@@ -3,3 +3,4 @@ This is my giphy API assignment that I made during the Richmond Coding Bootcamp,
 
 **LIVE DEMO: https://ali-row.github.io/Giphy-API/**
   
+ 
